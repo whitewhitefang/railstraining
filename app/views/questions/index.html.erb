@@ -5,7 +5,9 @@
     <time datetime="<%= question.formatted_created_at %>">
       <%= question.formatted_created_at %>
     </time>
+    <%= link_to "Show", question_path(question) %>
     <%= link_to "Edit", edit_question_path(question) %>
+    <%= link_to "Destroy", question_path(question), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
   </li>
 <% end %>
 </ol>
