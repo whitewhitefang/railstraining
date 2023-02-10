@@ -1,0 +1,11 @@
+<h1>Questions<h1>
+<ol>
+<% @questions.each do |question| %>
+  <li>Question <%= question.title %>: <%= question.body %>, was created 
+    <time datetime="<%= question.formatted_created_at %>">
+      <%= question.formatted_created_at %>
+    </time>
+    <%= link_to "Edit", edit_question_path(question) %>
+  </li>
+<% end %>
+</ol>
