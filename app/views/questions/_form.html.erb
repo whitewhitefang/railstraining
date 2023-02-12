@@ -1,15 +1,25 @@
+<%= render 'shared/errors', object: @question %>
+
 <%= form_with model: @question do |f| %>
-<div>
-  <div>  
+<div class='mb-3 row'>
+  <div class="col-lg-2 col-form-label">
     <%= f.label :title, 'Write the title' %>
-    <%= f.text_field :title, required: true, minlength: 2 %>
   </div>
-  <div>
+  <div class='col-lg-10 col-form-control'>
+    <%= f.text_field :title, placeholder: 'Question title' %>
+  </div>  
+</div>
+<div class='mb-3 row'>
+  <div class="col-lg-2 col-form-label">
     <%= f.label :body, 'Write question' %>
-    <%= f.text_area :body, required: true, minlength: 2 %>
   </div>
-  <div>
-    <%= f.submit 'Send' %>  
+  <div class="col-lg-6 col-form-control">
+    <%= f.text_area :body, placeholder: 'What about..?' %>
+  </div>  
+</div>
+<div class="mb-3 row">
+  <div class="col-lg-2 d-grid">
+    <%= f.submit 'Send', class: 'btn btn-success' %>  
   </div>
 </div>
 <% end %>

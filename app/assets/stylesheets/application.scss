@@ -1,0 +1,15 @@
+@import 'application.bootstrap.scss';
+
+.field_with_errors {
+  .form-control {
+    border-color: red;
+  }
+
+  .form-label {
+    color: red;
+  }
+}
+
+body {
+  background-color: aqua;
+}
